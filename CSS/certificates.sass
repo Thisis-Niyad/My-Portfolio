@@ -1,0 +1,87 @@
+.slider
+    position: relative
+    width: 100%
+    height: 370px
+    overflow: hidden
+.items
+    position: absolute
+    width: 450px
+    height: 320px
+    text-align: justify
+    transition: 0.5s
+    left: calc( 50% - 220px )
+    top: 20px
+    box-shadow: 3px 2px 9px #000
+
+#prev,#next,#prev2,#next2
+    position: absolute
+    top: 40%
+    color: #000000
+    left: 50px
+    border: none
+    background-color: rgba(0,0 ,0 ,0 )
+    z-index: 1
+    i
+        font-size: xx-large
+        transition: all 0.3s ease 0s
+        &:hover
+            color: #464545
+#next,#next2
+    left: unset
+    right: 50px
+#prev2,#next2
+    color: #fff
+.certiVeiw
+    width: 450px
+    height: 300px
+    background-color: #fff
+    // background-image: url("/certificates/img/Muhammed Niyad (38).jpg")
+    // filter: blur(2px)
+.seeall
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    justify-content: center
+
+.slider2
+    position: relative
+    width: 98vw
+    height: 370px
+    overflow: hidden
+    display: grid
+    align-items: center
+.items2
+    text-align: justify
+    display: flex
+    align-items: center
+    padding: 15px
+
+.slide
+    display: flex
+    width: calc(300px* 5)
+    position: absolute
+    justify-content: center
+    left: 0
+    transition: 0.6s
+.itm
+    transition: 0.6s
+    cursor: pointer
+.text-whi
+    color: #fff !important
+.projectCard
+    width: 270px
+    height: 200px
+    padding: 16px
+    border-radius: 7px
+    color: #fff
+    background: rgb(21,54,119)
+    background: linear-gradient(135deg, rgba(21,54,119,1) 0%, rgba(78,8,95,1) 100%)
+.projectbtn
+    border: 1px solid #8a06ff
+    color: #fff
+    width: 50%
+    &:hover
+        background-color: #8a06ff
+@media (max-width:980px)
+    .text-whi
+        color: #000 !important

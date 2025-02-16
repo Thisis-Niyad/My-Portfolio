@@ -1,0 +1,69 @@
+#switch {
+  width: 40px;
+  height: 21px;
+  margin: 10px 1px;
+  position: relative;
+  display: block;
+  background-color: #ebebeb;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+}
+#switch::after {
+  content: "";
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  background: rgb(255, 204, 137);
+  background: radial-gradient(circle, rgb(245, 175, 82) 12%, rgb(255, 153, 0) 100%);
+  transition: 0.3s;
+}
+
+.switchdiv {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#switchinput {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+#switchinput:checked + #switch {
+  background: #242424;
+}
+#switchinput:checked + #switch::after {
+  left: 21px;
+  background: radial-gradient(circle, #cecdcd 12%, #7c7c7c 100%);
+}
+
+.blackbody {
+  background: #0c0c0c;
+  color: snow;
+}
+
+.logoimg {
+  filter: drop-shadow(0px -2px 2px rgb(24, 158, 239));
+}
+
+.blackslider {
+  filter: drop-shadow(0px 0px 6px blue);
+}
+
+.blackitm {
+  box-shadow: 0px 0px 8px 8px #00ffb8;
+  z-index: 1;
+}
+
+.blur {
+  filter: blur(1px);
+}
+
+.blacktyper {
+  text-shadow: -3px 3px 7px #00ffdd;
+  color: #fff;
+}/*# sourceMappingURL=darkmode.css.map */

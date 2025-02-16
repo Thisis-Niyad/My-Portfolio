@@ -1,0 +1,66 @@
+header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 10% 0px
+    background-color: #000
+    color: #fff
+.nav_links
+    list-style: none
+    li
+        animation: fade-in-bottom 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+        display: inline-block
+        padding: 0px 20px
+        cursor: pointer
+        font-weight: 500
+        transition: all 0.1s ease 0s
+        &:hover
+            border-radius: 20px
+            border: 2px solid #fff
+            scale: 1.1
+        a
+            transition: all 0.3s ease 0s
+            font-weight: bold
+            &:hover
+                color: #0088a9
+@keyframes fade-in-bottom
+    0%
+        -webkit-transform: translateY(100px)
+        transform: translateY(100px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateY(0)
+        transform: translateY(0)
+        opacity: 1
+
+.nav_links li
+    &:nth-child(2)
+        animation-delay: 0.3s
+    &:nth-child(3)
+        animation-delay: 0.4s
+    &:nth-child(4)
+        animation-delay: 0.5s
+
+// ----skills----
+.skillbtn
+    padding: 13px
+    text-align: center
+    font-weight: 600
+    border: 1px solid #8a06ff
+    border-radius: 7px
+    &:hover
+        background-color: #8a06ff
+
+.borderRight
+    border-image-source: linear-gradient(180deg, rgba(217, 219, 219,0) 0%, rgb(147, 150, 150) 50%, rgba(217, 219, 219,0) 100%)
+    border-image-slice: 1
+    border-right: 1px solid
+.borderLeft
+    border-image-source: linear-gradient(180deg, rgba(217, 219, 219,0) 0%, rgb(147, 150, 150) 50%, rgba(217, 219, 219,0) 100%)
+    border-image-slice: 1
+    border-left: 1px solid
+.borderBottom
+    border-image-source: linear-gradient(90deg, rgba(217, 219, 219,0) 0%, rgb(147, 150, 150) 50%, rgba(217, 219, 219,0) 100%)
+    border-image-slice: 1
+    border-bottom: 1px solid
