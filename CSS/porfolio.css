@@ -420,6 +420,10 @@ footer {
   box-shadow: 3px 2px 9px #000;
 }
 
+.imgwidth {
+  width: 450px;
+}
+
 #prev, #next, #prev2, #next2 {
   position: absolute;
   top: 40%;
@@ -515,5 +519,14 @@ footer {
 @media (max-width: 980px) {
   .text-whi {
     color: #000 !important;
+  }
+}
+@media (max-width: 600px) {
+  .items {
+    left: calc(50% - 150px);
+  }
+  .imgwidth, .items {
+    width: 300px;
+    height: 210px;
   }
 }/*# sourceMappingURL=porfolio.css.map */
