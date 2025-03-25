@@ -41,4 +41,7 @@
   .row img {
     width: 400px;
   }
+  .certi img, .certi a {
+    width: 95%;
+  }
 }/*# sourceMappingURL=certifcates.css.map */
