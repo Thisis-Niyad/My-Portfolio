@@ -74,7 +74,7 @@ a, li {
     border-right: 2px solid #000000;
   }
   100% {
-    width: 410px;
+    width: 400px;
     border-right: 0px solid #000000;
   }
   75% {
@@ -103,7 +103,7 @@ a, li {
     opacity: 1;
   }
   100% {
-    transform: rotateX(70deg);
+    transform: rotateX(80deg);
     opacity: 0;
   }
 }
@@ -111,7 +111,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10% 0px;
+  padding: 10px 5% 0px;
   background-color: #000;
   color: #fff;
 }
@@ -121,23 +121,22 @@ header {
 }
 .nav_links li {
   animation: fade-in-bottom 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  display: inline-block;
   padding: 0px 20px;
   cursor: pointer;
   font-weight: 500;
   transition: all 0.1s ease 0s;
 }
 .nav_links li:hover {
-  border-radius: 20px;
-  border: 2px solid #fff;
   scale: 1.1;
+  color: #0088a9;
 }
 .nav_links li a {
   transition: all 0.3s ease 0s;
   font-weight: bold;
 }
 .nav_links li a:hover {
-  color: #0088a9;
+  border-radius: 20px;
+  border: 2px solid #fff;
 }
 
 @keyframes fade-in-bottom {
@@ -189,6 +188,53 @@ header {
   border-bottom: 1px solid;
 }
 
+.sideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.sideBar li {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.sideBar a {
+  width: 100%;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@media (min-width: 801px) {
+  .menu {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .hideon800 {
+    display: none;
+  }
+}
 #switch {
   width: 40px;
   height: 21px;
@@ -255,8 +301,26 @@ header {
 }
 
 .blacktyper {
-  text-shadow: -3px 3px 7px #00ffdd;
+  text-shadow: -1px 1px 4px #00ffdd;
   color: #fff;
+}
+
+.sideBar-wht {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
+}
+.sideBar-wht li:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px black;
+}
+
+.sideBar-blck {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+.sideBar-blck li:hover {
+  background-color: #000000;
+  box-shadow: 0px 0px 10px 0px #fff;
 }
 
 .pic {
@@ -281,6 +345,32 @@ header {
 
 .slideleft {
   animation: slide-in-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.nyddiv {
+  width: 100%;
+  height: 25vh;
+  overflow: hidden;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.nyddiv img {
+  width: 100%;
+}
+
+.nyddiv2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 30px;
+  top: 175px;
+}
+.nyddiv2 img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px #000000;
 }
 
 @keyframes slide-in-left {
@@ -335,9 +425,20 @@ header {
     opacity: 1;
   }
 }
+@media (min-width: 601px) {
+  .nyd_display {
+    display: none;
+  }
+  .homesection {
+    height: 85vh;
+  }
+}
 @media (max-width: 600px) {
   .picdiv {
     display: none;
+  }
+  .homesection {
+    height: 100vh;
   }
 }
 .contact {
@@ -365,10 +466,6 @@ header {
   box-shadow: 0px 0px 0px 0px;
   scale: 0.9;
   color: #0088a9;
-}
-
-.linkedin {
-  border: 6px solid black !important;
 }
 
 @keyframes fade-in-right {
@@ -528,5 +625,8 @@ footer {
   .imgwidth, .items {
     width: 300px;
     height: 210px;
+  }
+  .slider {
+    height: 260px;
   }
 }/*# sourceMappingURL=porfolio.css.map */

@@ -22,6 +22,32 @@
   animation: slide-in-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+.nyddiv {
+  width: 100%;
+  height: 25vh;
+  overflow: hidden;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.nyddiv img {
+  width: 100%;
+}
+
+.nyddiv2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 30px;
+  top: 175px;
+}
+.nyddiv2 img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px #000000;
+}
+
 @keyframes slide-in-left {
   0% {
     transform: translateX(-1000px);
@@ -74,8 +100,19 @@
     opacity: 1;
   }
 }
+@media (min-width: 601px) {
+  .nyd_display {
+    display: none;
+  }
+  .homesection {
+    height: 85vh;
+  }
+}
 @media (max-width: 600px) {
   .picdiv {
     display: none;
+  }
+  .homesection {
+    height: 100vh;
   }
 }/*# sourceMappingURL=home.css.map */

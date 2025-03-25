@@ -1,11 +1,10 @@
 window.onload = function () {
-    document.getElementById('main-content').style.display = 'none';
     setTimeout(function () {
         // document.getElementById('welcome').style.display = 'none';
         document.body.removeChild(document.getElementById('welcome'));
         document.getElementById('main-content').style.display = 'block';
         typeWriter();
-    }, 3000); // Match the animation duration (3s)
+    }, 2000); // Match the animation duration (3s)
 };
 const box = document.querySelector('.intro');
 box.addEventListener('animationend', () => {
@@ -15,6 +14,16 @@ box.addEventListener('animationend', () => {
     }, 500);
 });
 
+function showsidebar() {
+    const sidebar = document.querySelector('.sideBar');
+    sidebar.style.display = 'flex';
+
+}
+function closesidebar() {
+    const sidebar = document.querySelector('.sideBar');
+    sidebar.style.display = 'none';
+
+}
 const texts = [
     "Muhammed Niyad",
     "Web-Developer",
@@ -105,19 +114,19 @@ function slide(ids) {
             div.classList.remove("blur");
             break;
         case 2:
-            slide.style.left = "-210px";
+            slide.style.left = "-270px";
             div.style.scale = "1.2";
             div.classList.add('blackitm');
             div.classList.remove("blur");
             break;
         case 3:
-            slide.style.left = "-500px";
+            slide.style.left = "-540px";
             div.style.scale = "1.2";
             div.classList.add('blackitm');
             div.classList.remove("blur");
             break;
         case 4:
-            slide.style.left = "-790px";
+            slide.style.left = "-840px";
             div.style.scale = "1.2";
             div.classList.add('blackitm');
             div.classList.remove("blur");
@@ -181,7 +190,7 @@ function theme() {
     let cvbtn = document.querySelector(".cv")
     let typer = document.querySelector('.typer')
     let githubbtn = document.querySelector('.githubbtn');
-
+    let sidebar = document.querySelector('.sideBar');
     if (switchinput.checked) {
         body.classList.add('blackbody');
         logoimg.classList.add('logoimg');
@@ -194,6 +203,7 @@ function theme() {
         typer.classList.add("blacktyper");
         githubbtn.classList.remove("btn-dark");
         githubbtn.classList.add("btn-info");
+        sidebar.classList.add('sideBar-blck')
     }
     else {
         body.classList.remove('blackbody');
@@ -207,6 +217,8 @@ function theme() {
         typer.classList.add("text-black");
         githubbtn.classList.remove("btn-info");
         githubbtn.classList.add("btn-dark");
+        sidebar.classList.remove('sideBar-blck')
+
     }
 }
 

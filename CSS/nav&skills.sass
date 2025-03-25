@@ -2,27 +2,26 @@ header
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 10px 10% 0px
+    padding: 10px 5% 0px
     background-color: #000
     color: #fff
 .nav_links
     list-style: none
     li
         animation: fade-in-bottom 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
-        display: inline-block
         padding: 0px 20px
         cursor: pointer
         font-weight: 500
         transition: all 0.1s ease 0s
         &:hover
-            border-radius: 20px
-            border: 2px solid #fff
             scale: 1.1
+            color: #0088a9
         a
             transition: all 0.3s ease 0s
             font-weight: bold
             &:hover
-                color: #0088a9
+                border-radius: 20px
+                border: 2px solid #fff
 @keyframes fade-in-bottom
     0%
         -webkit-transform: translateY(100px)
@@ -64,3 +63,45 @@ header
     border-image-source: linear-gradient(90deg, rgba(217, 219, 219,0) 0%, rgb(147, 150, 150) 50%, rgba(217, 219, 219,0) 100%)
     border-image-slice: 1
     border-bottom: 1px solid
+
+.sideBar
+    position: fixed
+    top: 0
+    right: 0
+    height: 100vh
+    width: 250px
+    z-index: 999
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(10px)
+    display: none
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    padding: 0
+    animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    li
+        width: 100%
+        padding: 10px
+        font-weight: bold
+        font-size: 1.3rem
+
+    a
+        width: 100%
+@keyframes slide-in-right
+    0%
+        -webkit-transform: translateX(1000px)
+        transform: translateX(1000px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+        opacity: 1
+
+@media (min-width:801px)
+    .menu
+        display: none
+
+@media ( max-width: 800px)
+    .hideon800
+        display: none

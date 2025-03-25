@@ -64,6 +64,24 @@
 }
 
 .blacktyper {
-  text-shadow: -3px 3px 7px #00ffdd;
+  text-shadow: -1px 1px 4px #00ffdd;
   color: #fff;
+}
+
+.sideBar-wht {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
+}
+.sideBar-wht li:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px black;
+}
+
+.sideBar-blck {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+.sideBar-blck li:hover {
+  background-color: #000000;
+  box-shadow: 0px 0px 10px 0px #fff;
 }/*# sourceMappingURL=darkmode.css.map */
