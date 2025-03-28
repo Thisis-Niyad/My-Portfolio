@@ -1,3 +1,7 @@
+.sectionabout {
+  height: 100vh;
+}
+
 .pic {
   filter: drop-shadow(2px 4px 6px yellow);
 }
@@ -114,5 +118,10 @@
   }
   .homesection {
     height: 100vh;
+  }
+}
+@media (max-width: 800px) {
+  .sectionabout {
+    height: 100%;
   }
 }/*# sourceMappingURL=home.css.map */

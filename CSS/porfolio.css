@@ -324,6 +324,10 @@ header {
   box-shadow: 0px 0px 10px 0px #fff;
 }
 
+.sectionabout {
+  height: 100vh;
+}
+
 .pic {
   filter: drop-shadow(2px 4px 6px yellow);
 }
@@ -440,6 +444,11 @@ header {
   }
   .homesection {
     height: 100vh;
+  }
+}
+@media (max-width: 800px) {
+  .sectionabout {
+    height: 100%;
   }
 }
 .contact {
