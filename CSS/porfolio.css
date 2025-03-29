@@ -577,6 +577,7 @@ footer {
   overflow: hidden;
   display: grid;
   align-items: center;
+  font-family: sans-serif;
 }
 
 .items2 {
@@ -588,7 +589,7 @@ footer {
 
 .slide {
   display: flex;
-  width: 1500px;
+  width: 1800px;
   position: absolute;
   justify-content: center;
   left: 0;

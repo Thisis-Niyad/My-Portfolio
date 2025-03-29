@@ -137,6 +137,12 @@ function slide(ids) {
             div.classList.add('blackitm');
             div.classList.remove("blur");
             break;
+        case 6:
+            slide.style.left = "-1360px";
+            div.style.scale = "1.2";
+            div.classList.add('blackitm');
+            div.classList.remove("blur");
+            break;
         default:
             break;
     }
@@ -154,7 +160,7 @@ document.querySelector(".slider2").addEventListener("click", (event) => {
 })
 
 function nextitm() {
-    if (act < 5) {
+    if (act < 6) {
         act++;
         slide(act);
     }
