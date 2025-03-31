@@ -236,3 +236,7 @@ window.addEventListener("scroll", () => {
         totop.classList.remove("active");
     }
 })
+function scrollToTop(event) {
+    event.preventDefault(); // Prevent default link behavior
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling
+}

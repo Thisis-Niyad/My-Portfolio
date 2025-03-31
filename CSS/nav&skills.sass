@@ -81,12 +81,15 @@ header
     animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
     li
         width: 100%
-        padding: 10px
-        font-weight: bold
-        font-size: 1.3rem
-
-    a
-        width: 100%
+        &:not(:has(a))
+            padding: 10px
+            width: 100%
+        a
+            display: block
+            width: 100%
+            padding: 10px
+            font-weight: bold
+            font-size: 1.3rem
 @keyframes slide-in-right
     0%
         -webkit-transform: translateX(1000px)
