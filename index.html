@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="CSS/porfolio.css">
 </head>
 
-<body>
+<body class="system-mode">
     <div class="section welcome bg-white" id="welcome">
         <div class="intro">
             <img src="IMG/Welcome to My Portfolio1.svg" width="275" alt="">
@@ -68,17 +68,16 @@
         </div>
 
         <div class="homesection row w-100">
-            <div class="col m-auto p-5 fs-3 fw-bold">
+            <div class="col m-auto p-5 fs-3">
                 <div class="slidetop"> Hi,</div>
                 <div class="slideleft">I’m <span class="fs-2 text-black typer"></span>
                     <span style=" font-weight: 400;font-size: xx-large;">|</span>
                 </div>
-                <div class="slideright">Aspiring software engineer | Front-End
-                    Developer | BCA Student I create
-                    interactive and responsive web experiences.
+                <div class="slideright">Passionate Full-Stack Developer in training | BCA Student | Crafting responsive,
+                    engaging, and scalable web experiences.
                 </div>
                 <a class="btn btn-outline-dark w-25 fw-bold cv slidebottom"
-                    onclick="window.open('Muhammed Niyad CV Resume .pdf', '_blank')">CV</a>
+                    onclick="window.open('Muhammed Niyad CV Resume.pdf', '_blank')">CV</a>
                 <a class=" btn btn-dark w-25 fw-bold githubbtn slidebottom"
                     href="https://github.com/Thisis-Niyad">GitHub</a>
 
@@ -129,30 +128,31 @@
             </div>
         </div>
 
-        <div class="sectionabout" id="about">
-            <div class="fs-1 text-center fw-bold">About<span class="text-primary"> Me</span></div>
+        <div id="about">
+            <div class="text-center heading">About Me</div>
 
             <div class="row w-100 m-0">
                 <div class="col-lg col-sm col-md">
                     <img src="IMG/express15.png" class="w-100 logo" alt="">
                 </div>
-                <div class="col-lg col-sm col-md fw-medium text-center p-3 lead m-auto fs-4">
-                    I am a passionate and detail-oriented Web Developer with a strong foundation in both front-end and
-                    back-end technologies. Currently pursuing a BCA degree at Calicut University, I specialize in
-                    building high-performance, user-friendly, and visually appealing web applications. With experience
-                    in modern web technologies, including JavaScript, Node.js, Express.js, and PostgreSQL, I am
-                    continuously expanding my full-stack development skills. My goal is to create seamless digital
-                    experiences that drive engagement and innovation.
+                <div class="col-lg col-sm col-md  text-center p-3 lead m-auto fs-5">
+                    I am a passionate and detail-oriented full-stack web developer with a solid foundation in both
+                    front-end and back-end technologies. Currently pursuing a BCA degree at Calicut University, I
+                    specialize in building dynamic, user-focused, and scalable web applications. Proficient in
+                    technologies like JavaScript, Node.js, Express.js, PostgreSQL, and MongoDB, I also bring hands-on
+                    experience with RESTful APIs and the MVC architecture. I’m continuously learning and building
+                    projects that reflect my dedication to clean code, performance, and user experience. My goal is to
+                    contribute to impactful products while growing as a developer through real-world challenges.
                 </div>
             </div>
         </div>
 
         <div id="skills">
-            <div class="fs-1 text-center fw-bold"> <span class="text-primary">My </span>Skills</div>
+            <div class="text-center heading"> TECH STACK</div>
             <div class="row w-100 m-auto">
                 <div class="col borderRight skillcol">
 
-                    <div class="text-center fw-bold fs-3 borderBottom">Front-End</div>
+                    <div class="text-center fs-3 borderBottom">Front-End</div>
                     <div class="row">
                         <div class="col p-2">
                             <div class="skillbtn">HTML5</div>
@@ -169,16 +169,21 @@
                             <div class="skillbtn">Sass</div>
                         </div>
                         <div class="col p-2">
-                            <div class="skillbtn">bootstrap</div>
+                            <div class="skillbtn">Bootstrap</div>
                         </div>
                         <div class="col p-2">
-                            <div class="skillbtn">React (learning)</div>
+                            <div class="skillbtn">EJS templating</div>
+                        </div>
+                        <div class="row">
+                            <div class="col p-2">
+                                <div class="skillbtn">React (learning)</div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col borderRight skillcol">
-                    <div class="text-center fw-bold fs-3 borderBottom">Back-End</div>
+                    <div class="text-center fs-3 borderBottom">Back-End</div>
                     <div class="row">
                         <div class="col p-2">
                             <div class="skillbtn">Node js</div>
@@ -187,22 +192,24 @@
                             <div class="skillbtn">express js</div>
                         </div>
                         <div class="col p-2">
-                            <div class="skillbtn">PostgreSQL</div>
+                            <div class="skillbtn">RESTful API</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col p-2">
-                            <div class="skillbtn">MongoDB (learning)</div>
+                            <div class="skillbtn">error handling</div>
                         </div>
                         <div class="col p-2">
-                            <div class="skillbtn">Git & GitHub</div>
+                            <div class="skillbtn">environment variables</div>
+                        </div>
+                        <div class="col p-2">
+                            <div class="skillbtn">MVC architecture</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col skillcol">
-                    <div class="text-center fw-bold fs-3 borderBottom">Programming language</div>
-
+                    <div class="text-center fs-3 borderBottom">Programming language</div>
                     <div class="row">
                         <div class="col p-2">
                             <div class="skillbtn">C</div>
@@ -214,13 +221,17 @@
                             <div class="skillbtn">JavaScript</div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col p-2">
+                            <div class="skillbtn">C++</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="row w-100 m-auto">
-
                 <div class="col borderRight skillcol">
-                    <div class="text-center fw-bold fs-3 borderBottom">Developer Tools</div>
+                    <div class="text-center fs-3 borderBottom">Developer Tools</div>
                     <div class="row">
                         <div class="col p-2">
                             <div class="skillbtn">Vs code</div>
@@ -228,17 +239,25 @@
                         <div class="col p-2">
                             <div class="skillbtn">figma (basic)</div>
                         </div>
+                        <div class="col p-2">
+                            <div class="skillbtn">dotenv</div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col p-2">
                             <div class="skillbtn">Git & Github</div>
                         </div>
-
+                        <div class="col p-2">
+                            <div class="skillbtn">Nodemon</div>
+                        </div>
+                        <div class="col p-2">
+                            <div class="skillbtn">Cloud Deployment Platforms</div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col skillcol">
-                    <div class="text-center fw-bold fs-3 borderBottom">Soft skills</div>
+                    <div class="text-center fs-3 borderBottom">Soft skills</div>
                     <div class="row">
                         <div class="col p-2">
                             <div class="skillbtn">Problem-solving</div>
@@ -255,144 +274,125 @@
                             <div class="skillbtn"> Time Management</div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="fs-1 text-center fw-bold"> <span class="text-primary">My </span>certificates</div>
-            <div class="text-end px-2 fw-medium text-primary"><a href="certificates.html">Veiw All</a></div>
-            <div class="slider">
-                <div class="items">
-                    <img src="certificates/img/Muhammed Niyad (36).jpg" class="imgwidth" alt="">
-                </div>
-                <div class="items">
-                    <img src="certificates/img/Muhammed Niyad (37).jpg" class="imgwidth" alt="">
-                </div>
-                <div class="items">
-                    <img src="certificates/img/Muhammed Niyad (35).jpg" class="imgwidth" alt="">
-                </div>
-                <div class="items">
-                    <img src="certificates/img/Muhammed Niyad (38).jpg" class="imgwidth" alt="">
-                </div>
-                <div class="items">
-                    <div class="certiVeiw fw-bold fs-4 imgwidth">
-                        <div class="row">
-                            <div class="col"><img class="w-100" src="certificates/img/Muhammed Niyad (14).jpg" alt="">
-                            </div>
-                            <div class="col"><img class="w-100" src="certificates/img/Muhammed Niyad (21).jpg" alt="">
-                            </div>
+                    <div class="row">
+                        <div class="col p-2">
+                            <div class="skillbtn">Motivation</div>
                         </div>
-                        <div class="row">
-                            <div class="col"><img class="w-100" src="certificates/img/Muhammed Niyad (19).jpg" alt="">
-                            </div>
-                            <div class="col w-100 seeall text-dark">
-                                34+ certificates
-                                <a href="certificates.html" class=" text-primary">veiwall</a>
-                            </div>
+                        <div class="col p-2">
+                            <div class="skillbtn">Logical thinking</div>
                         </div>
                     </div>
-
-                </div>
-                <button class="chevronbtn" id="next"><i class="bi bi-chevron-right"></i></button>
-                <button class="chevronbtn" id="prev"><i class="bi bi-chevron-left"></i></button>
-            </div>
-
-            <div class="prjects" id="projects">
-                <div class="fs-1 text-center fw-bold"> Latest <span class="text-primary">Projects</span>
                 </div>
 
-                <div class="slider2">
-                    <div class="slide">
-                        <div class="items2">
-                            <div id="id1" class="projectCard  mb-3 itm" onclick="slide(1)" style="max-width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">Freelance Project</h5>
-                                    <p class="card-text">Developed a custom website for a client providing branding,
-                                        video production, logo design, and web design services
-                                    </p>
-                                    <a href="https://thisis-niyad.github.io/Brandism/" class="btn projectbtn">visit</a>
-                                </div>
-                            </div>
+                <div class="col skillcol  borderLeft">
+                    <div class="text-center fs-3 borderBottom">Databases</div>
+                    <div class="row">
+                        <div class="col p-2">
+                            <div class="skillbtn">PostgreSQL</div>
                         </div>
-                        <div class="items2">
-                            <div id="id2" class="projectCard  mb-3 itm" onclick="slide(2)" style="max-width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">TO-Do List App</h5>
-                                    <p class="card-text">A feature-rich To-Do List App built with JavaScript, HTML, and
-                                        CSS, designed for efficient task management.
-                                    </p>
-                                    <a href="https://thisis-niyad.github.io/To-Do_List_App/"
-                                        class="btn projectbtn">visit</a>
-                                </div>
-                            </div>
+                        <div class="col p-2">
+                            <div class="skillbtn">MongoDB(mongoose)</div>
                         </div>
-
-                        <div class="items2">
-                            <div id="id3" onclick="slide(3)" class="projectCard mb-3 itm" style="max-width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">Calculator(Postfix)</h5>
-                                    <p class="card-text">"I created a calculator web page using the postfix method for
-                                        accurate expression evaluation with a clean UI."</p>
-                                    <a href=" https://thisis-niyad.github.io/simple-Calcultor/"
-                                        class="btn projectbtn">visit</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="items2">
-                            <div id="id4" onclick="slide(4)" class="projectCard mb-3 itm" style="max-width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">Ping-Pong Game</h5>
-                                    <p class="card-text">"I built a Ping Pong game using JavaScript with smooth
-                                        animations, real-time controls, and score tracking."</p>
-                                    <a href=" https://thisis-niyad.github.io/simple-pingPong-game/"
-                                        class="btn projectbtn">visit</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="items2">
-                            <div id="id5" onclick="slide(5)" class="projectCard mb-3 itm" style="max-width: 18rem;">
-                                <div class="card-body" style="
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center; /* Centers vertically */
-                                align-items: center;    /* Centers horizontally */
-                                height: 100%;           /* Ensure the card body spans the full height */
-                                text-align: center;     /* Aligns text centrally */">
-                                    <h5 class="card-title">Loading</h5>
-                                    <div class="btn projectbtn"><i class="bi bi-lock-fill"></i></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="items2">
-                            <div id="id6" onclick="slide(6)" class="projectCard mb-3 itm" style="max-width: 18rem;">
-                                <div class="card-body" style="
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center; /* Centers vertically */
-                                align-items: center;    /* Centers horizontally */
-                                height: 100%;           /* Ensure the card body spans the full height */
-                                text-align: center;     /* Aligns text centrally */ ">
-                                    <h5 class="card-title">Loading</h5>
-                                    <div class="btn projectbtn"><i class="bi bi-lock-fill"></i></div>
-                                </div>
-                            </div>
+                        <div class="col p-2">
+                            <div class="skillbtn">CRUD operation</div>
                         </div>
                     </div>
-
-                    <button id="next2" class="chevronbtn" onclick="nextitm()">
-                        <i class="bi bi-chevron-right"></i>
-                    </button>
-                    <button id="prev2" class="chevronbtn" onclick="previtm()">
-                        <i class="bi bi-chevron-left"></i>
-                    </button>
                 </div>
             </div>
         </div>
 
+        <div class="text-center heading"> My certificates</div>
+        <div class="text-end px-2 fw-medium text-primary"><a href="certificates.html">Veiw All</a></div>
+        <div class="slider">
+            <div class="items">
+                <img src="certificates/img/Muhammed Niyad (36).jpg" class="imgwidth" alt="">
+            </div>
+            <div class="items">
+                <img src="certificates/img/Muhammed Niyad (37).jpg" class="imgwidth" alt="">
+            </div>
+            <div class="items">
+                <img src="certificates/img/Muhammed Niyad (35).jpg" class="imgwidth" alt="">
+            </div>
+            <div class="items">
+                <img src="certificates/img/Muhammed Niyad (38).jpg" class="imgwidth" alt="">
+            </div>
+            <div class="items">
+                <div class="certiVeiw fw-bold fs-4 imgwidth">
+                    <div class="row">
+                        <div class="col"><img class="w-100" src="certificates/img/Muhammed Niyad (14).jpg" alt="">
+                        </div>
+                        <div class="col"><img class="w-100" src="certificates/img/Muhammed Niyad (21).jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><img class="w-100" src="certificates/img/Muhammed Niyad (19).jpg" alt="">
+                        </div>
+                        <div class="col w-100 seeall text-dark">
+                            34+ certificates
+                            <a href="certificates.html" class=" text-primary">veiwall</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="chevronbtn" id="next"><i class="bi bi-chevron-right"></i></button>
+            <button class="chevronbtn" id="prev"><i class="bi bi-chevron-left"></i></button>
+        </div>
+
+        <section class="projects" id="projects">
+            <h2 class="heading"> Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3> BookNesto</h3>
+                    <p>Full-stack web app to manage books and authors, built with Node.js, Express, EJS, and MongoDB.
+                    </p>
+                    <a href="https://booknesto.onrender.com" target="_blank">Live Demo</a>
+                    <a href="https://github.com/Thisis-Niyad/BookNesto" target="_blank">GitHub Repo</a>
+                </div>
+
+                <div class="project-card">
+                    <h3> TO-Do List App</h3>
+                    <p>A feature-rich To-Do List App built with JavaScript, HTML, and
+                        CSS, designed for efficient task management.</p>
+                    <a href="https://thisis-niyad.github.io/To-Do_List_App/">Live Demo</a>
+                    <a href="https://github.com/Thisis-Niyad/To-Do_List_App">GitHub Repo</a>
+                </div>
+
+                <div class="project-card">
+                    <h3> Freelance Project</h3>
+                    <p>Developed a custom website for a client providing branding,
+                        video production, logo design, and web design services</p>
+                    <a href="https://thisis-niyad.github.io/Brandism/">Live Demo</a>
+                    <a href="https://github.com/Thisis-Niyad/Brandism">GitHub Repo</a>
+                </div>
+
+                <div class="project-card">
+                    <h3> Calculator(Postfix) </h3>
+                    <p>I created a calculator web page using the postfix method for
+                        accurate expression evaluation with a clean UI.</p>
+                    <a href="https://thisis-niyad.github.io/simple-Calcultor/">Live Demo</a>
+                    <a href="https://github.com/Thisis-Niyad/simple-Calcultor">GitHub Repo</a>
+                </div>
+
+                <div class="project-card">
+                    <h3> Ping-Pong Game</h3>
+                    <p>I built a Ping Pong game using JavaScript with smooth
+                        animations, real-time controls, and score tracking.</p>
+                    <a href="https://thisis-niyad.github.io/simple-pingPong-game/">Live Demo</a>
+                    <a href="https://github.com/Thisis-Niyad/simple-pingPong-game">GitHub Repo</a>
+                </div>
+
+                <div class="project-card">
+                    <h3> Loading </h3>
+                    <a href=""><i class="bi bi-lock-fill"></i></a>
+                </div>
+
+            </div>
+        </section>
+
+
         <footer id="contact">
-            <div class="text-center fs-1 fw-bold pb-4" style="padding-left:60px ; padding-right: 60px;"> Contact Me
+            <div class="text-center pb-4" style="font-size: 2.5rem; padding-left:60px ; padding-right: 60px;"> Contact
+                Me
             </div>
             <div class="contact" title="whatsapp">
                 <a href="https://wa.me/918606079774" target="_blank">

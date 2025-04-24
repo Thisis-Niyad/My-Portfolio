@@ -26,8 +26,8 @@ function closesidebar() {
 }
 const texts = [
     "Muhammed Niyad",
-    "Web-Developer",
-    "Front-end Web Developer",
+    "Full Stack Web-Developer",
+    "Web Developer",
     "Autodidacts"
 ]
 let textIndex = 0;
@@ -94,85 +94,26 @@ prev.onclick = function () {
 }
 
 
-let act = 1;
-function slide(ids) {
-    act = ids;
-    let slide = document.querySelector(".slide");
-    let items = document.querySelectorAll(".itm");
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const switchinput = document.getElementById("switchinput");
 
-    items.forEach(element => {
-        element.style.scale = "1";
-        element.classList.remove('blackitm');
-        element.classList.add("blur");
-    });
-    let div = document.getElementById(`id${ids}`);
-    switch (ids) {
-        case 1:
-            slide.style.left = "10%";
-            div.style.scale = "1.2";
-            div.classList.add('blackitm');
-            div.classList.remove("blur");
-            break;
-        case 2:
-            slide.style.left = "-270px";
-            div.style.scale = "1.2";
-            div.classList.add('blackitm');
-            div.classList.remove("blur");
-            break;
-        case 3:
-            slide.style.left = "-540px";
-            div.style.scale = "1.2";
-            div.classList.add('blackitm');
-            div.classList.remove("blur");
-            break;
-        case 4:
-            slide.style.left = "-840px";
-            div.style.scale = "1.2";
-            div.classList.add('blackitm');
-            div.classList.remove("blur");
-            break;
-        case 5:
-            slide.style.left = "-1100px";
-            div.style.scale = "1.2";
-            div.classList.add('blackitm');
-            div.classList.remove("blur");
-            break;
-        case 6:
-            slide.style.left = "-1360px";
-            div.style.scale = "1.2";
-            div.classList.add('blackitm');
-            div.classList.remove("blur");
-            break;
-        default:
-            break;
-    }
-}
 
-document.querySelector(".slider2").addEventListener("click", (event) => {
-    if (event.target == document.querySelector(".slider2")) {
-        let items = document.querySelectorAll(".itm");
-        items.forEach(element => {
-            element.style.scale = "1";
-            element.classList.remove('blackitm');
-            element.classList.remove("blur");
-        });
-    }
-})
 
-function nextitm() {
-    if (act < 6) {
-        act++;
-        slide(act);
+mediaQuery.addEventListener('change', (e) => {
+    if (e.matches) {
+        console.log('🔄 Switched to dark mode');
+        switchinput.checked = true;
+        localStorage.setItem('checkboxState', switchinput.checked);
+        theme();
+    } else {
+        console.log('🔄 Switched to light mode');
+        switchinput.checked = false;
+        localStorage.setItem('checkboxState', switchinput.checked);
+        theme();
     }
-}
-function previtm() {
-    if (act > 1) {
-        act--;
-        slide(act);
-    }
-}
+});
 
-let switchinput = document.getElementById("switchinput");
+
 const savedState = localStorage.getItem('checkboxState');
 if (savedState === 'true') {
     switchinput.checked = true;
@@ -186,6 +127,13 @@ switchinput.addEventListener("change", function () {
     theme();
 })
 
+if (mediaQuery.matches) {
+    switchinput.checked = true;
+    theme();
+} else {
+    switchinput.checked = false;
+    theme();
+}
 
 function theme() {
     let body = document.body;
@@ -210,6 +158,7 @@ function theme() {
         githubbtn.classList.remove("btn-dark");
         githubbtn.classList.add("btn-info");
         sidebar.classList.add('sideBar-blck')
+
     }
     else {
         body.classList.remove('blackbody');
@@ -224,9 +173,15 @@ function theme() {
         githubbtn.classList.remove("btn-info");
         githubbtn.classList.add("btn-dark");
         sidebar.classList.remove('sideBar-blck')
-
+        // headings.forEach(element => {
+        //     element.classList.add('light-heading');
+        //     element.classList.remove('dark-heading');
+        // });
     }
 }
+
+document.querySelector('body').classList.remove('system-mode');
+
 
 const totop = document.querySelector(".to-top");
 window.addEventListener("scroll", () => {
