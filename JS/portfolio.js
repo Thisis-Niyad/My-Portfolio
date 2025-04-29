@@ -137,7 +137,6 @@ if (mediaQuery.matches) {
 
 function theme() {
     let body = document.body;
-    let logoimg = document.querySelector(".logo");
     let slider = document.querySelector(".slider");
     let next = document.querySelector("#next");
     let prev = document.querySelector("#prev");
@@ -147,7 +146,6 @@ function theme() {
     let sidebar = document.querySelector('.sideBar');
     if (switchinput.checked) {
         body.classList.add('blackbody');
-        logoimg.classList.add('logoimg');
         slider.classList.add("blackslider");
         next.classList.add("text-whi");
         prev.classList.add("text-whi");
@@ -162,7 +160,6 @@ function theme() {
     }
     else {
         body.classList.remove('blackbody');
-        logoimg.classList.remove('logoimg');
         slider.classList.remove("blackslider");
         next.classList.remove("text-whi");
         prev.classList.remove("text-whi");
@@ -173,10 +170,7 @@ function theme() {
         githubbtn.classList.remove("btn-info");
         githubbtn.classList.add("btn-dark");
         sidebar.classList.remove('sideBar-blck')
-        // headings.forEach(element => {
-        //     element.classList.add('light-heading');
-        //     element.classList.remove('dark-heading');
-        // });
+
     }
 }
 
@@ -195,3 +189,20 @@ function scrollToTop(event) {
     event.preventDefault(); // Prevent default link behavior
     window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling
 }
+
+let cta = document.querySelector('#cta-checkbox');
+let ctaLabel = document.querySelector('#cta-label');
+let ctaTxt = document.querySelector('#cta-txt');
+let gDown = document.querySelector('#graph-down');
+let gUp = document.querySelector('#graph-up');
+cta.addEventListener('change', () => {
+    if (cta.checked) {
+        ctaTxt.innerText = 'With Me';
+        gUp.classList.remove('d-none')
+        gDown.classList.add('d-none')
+    } else {
+        ctaTxt.innerText = 'With Out Me';
+        gUp.classList.add('d-none')
+        gDown.classList.remove('d-none')
+    }
+})
