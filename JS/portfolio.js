@@ -26,8 +26,8 @@ function closesidebar() {
 }
 const texts = [
     "Muhammed Niyad",
+    "MERN Stack Developer",
     "Full Stack Web-Developer",
-    "Web Developer",
     "Autodidacts"
 ]
 let textIndex = 0;
@@ -197,12 +197,19 @@ let gDown = document.querySelector('#graph-down');
 let gUp = document.querySelector('#graph-up');
 cta.addEventListener('change', () => {
     if (cta.checked) {
+        ctaLabel.classList.add('flexdir-row')
         ctaTxt.innerText = 'With Me';
         gUp.classList.remove('d-none')
         gDown.classList.add('d-none')
+        ctaTxt.classList.add('animetxt-left')
+        ctaTxt.classList.remove('animetxt-right')
     } else {
         ctaTxt.innerText = 'With Out Me';
         gUp.classList.add('d-none')
         gDown.classList.remove('d-none')
+        ctaLabel.classList.remove('flexdir-row')
+        ctaTxt.classList.add('animetxt-right')
+        ctaTxt.classList.remove('animetxt-left')
+
     }
 })
