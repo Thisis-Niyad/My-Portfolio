@@ -27,7 +27,7 @@ function closesidebar() {
 const texts = [
     "Muhammed Niyad",
     "MERN Stack Developer",
-    "Full Stack Web-Developer",
+    "Full Stack Developer",
     "Autodidacts"
 ]
 let textIndex = 0;
