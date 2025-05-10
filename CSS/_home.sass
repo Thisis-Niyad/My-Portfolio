@@ -144,7 +144,8 @@
         -webkit-transform: translateY(0)
         transform: translateY(0)
         opacity: 1
-
+.introTxt
+    padding: 3rem
 .aboutTxt
     max-width: 1000px
     text-align: center
@@ -155,15 +156,23 @@
         display: none
     .homesection
         height: 85vh
+
+@media (max-width:800px)
+    .sectionabout
+        height: 100%
+    .introTxt
+        padding: 1rem 3rem
 @media (max-width:600px)
     .picdiv
         display: none
     .homesection
         height: 100vh
-@media (max-width:800px)
-    .sectionabout
-        height: 100%
+    .introTxt
+        padding: 8rem 3rem 0rem
 
+@media (max-width:400px)
+    .introTxt
+        padding: 8rem 1.5rem 0rem
 .animetxt-right
     animation: scale-in-hor-right 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
 
