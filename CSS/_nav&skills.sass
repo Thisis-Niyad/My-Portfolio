@@ -3,24 +3,27 @@ header
     justify-content: space-between
     align-items: center
     padding: 10px 5% 0px
-    background-color: #000
+    background-color: rgba(0,0,0,0.8)
     color: #fff
+    backdrop-filter: blur(2px)
 .nav_links
     list-style: none
+    transition: all 0.3s ease 0s
     li
         animation: fade-in-bottom 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
         padding: 0px 20px
         cursor: pointer
         font-weight: 500
-        transition: all 0.1s ease 0s
+        transition: all 0.3s ease 0s
         &:hover
             scale: 1.1
             color: #0088a9
         a
-            transition: all 0.3s ease 0s
+            // transition: all 0.3s ease 0s
             font-weight: bold
+            padding: 5px
+            border-radius: 20px
             &:hover
-                border-radius: 20px
                 border: 2px solid #fff
 @keyframes fade-in-bottom
     0%
@@ -109,3 +112,6 @@ header
 @media ( max-width: 800px)
     .hideon800
         display: none
+@media ( max-width: 600px)
+    header
+        background-color: rgb(0,0,0)

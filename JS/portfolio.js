@@ -13,7 +13,12 @@ box.addEventListener('animationend', () => {
         box.classList.add('intro1');
     }, 500);
 });
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    // Adjust rotation based on scroll position
+    document.getElementById('background-sqr').style.transform = `rotate(${scrollY * 0.1 + 45}deg)`;
 
+});
 function showsidebar() {
     const sidebar = document.querySelector('.sideBar');
     sidebar.style.display = 'flex';
@@ -137,40 +142,25 @@ if (mediaQuery.matches) {
 
 function theme() {
     let body = document.body;
-    let slider = document.querySelector(".slider");
     let next = document.querySelector("#next");
     let prev = document.querySelector("#prev");
-    let cvbtn = document.querySelector(".cv")
     let typer = document.querySelector('.typer')
-    let githubbtn = document.querySelector('.githubbtn');
     let sidebar = document.querySelector('.sideBar');
     if (switchinput.checked) {
         body.classList.add('blackbody');
-        slider.classList.add("blackslider");
         next.classList.add("text-whi");
         prev.classList.add("text-whi");
-        cvbtn.classList.remove("btn-outline-dark");
-        cvbtn.classList.add("btn-outline-info");
         typer.classList.remove("text-black");
         typer.classList.add("blacktyper");
-        githubbtn.classList.remove("btn-dark");
-        githubbtn.classList.add("btn-info");
-        sidebar.classList.add('sideBar-blck')
-
+        sidebar.classList.add('sideBar-blck');
     }
     else {
         body.classList.remove('blackbody');
-        slider.classList.remove("blackslider");
         next.classList.remove("text-whi");
         prev.classList.remove("text-whi");
-        cvbtn.classList.remove("btn-outline-info");
-        cvbtn.classList.add("btn-outline-dark");
         typer.classList.remove("blacktyper");
         typer.classList.add("text-black");
-        githubbtn.classList.remove("btn-info");
-        githubbtn.classList.add("btn-dark");
-        sidebar.classList.remove('sideBar-blck')
-
+        sidebar.classList.remove('sideBar-blck');
     }
 }
 
