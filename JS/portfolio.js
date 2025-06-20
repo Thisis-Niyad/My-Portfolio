@@ -22,11 +22,13 @@ window.addEventListener('scroll', () => {
 function showsidebar() {
     const sidebar = document.querySelector('.sideBar');
     sidebar.style.display = 'flex';
+    document.getElementById('switch').style.zIndex = -1;
 
 }
 function closesidebar() {
     const sidebar = document.querySelector('.sideBar');
     sidebar.style.display = 'none';
+    document.getElementById('switch').style.zIndex = 3;
 
 }
 const texts = [
