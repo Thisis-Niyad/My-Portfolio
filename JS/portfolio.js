@@ -5,7 +5,31 @@ window.onload = function () {
         document.getElementById('main-content').style.display = 'block';
         typeWriter();
     }, 2000); // Match the animation duration (3s)
+    setTimeout(function () {
+        playDing();
+        document.getElementById("popup").style.display = "flex";
+        setTimeout(function () {
+            document.getElementById("popup").style.display = "none";
+        }, 5000)
+    }, 5000);
 };
+function playDing() {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(880, ctx.currentTime); // A5
+    gain.gain.setValueAtTime(0.001, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.2, ctx.currentTime + 0.01);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + 0.4);
+}
+
 const box = document.querySelector('.intro');
 box.addEventListener('animationend', () => {
     setTimeout(() => {
