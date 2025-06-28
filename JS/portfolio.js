@@ -5,29 +5,50 @@ window.onload = function () {
         document.getElementById('main-content').style.display = 'block';
         typeWriter();
     }, 2000); // Match the animation duration (3s)
+};
+
+let audioAllowed = false;
+window.addEventListener('click', () => {
+    audioAllowed = true;
     setTimeout(function () {
-        playDing();
+        playMelody();
         document.getElementById("popup").style.display = "flex";
         setTimeout(function () {
             document.getElementById("popup").style.display = "none";
         }, 5000)
-    }, 5000);
-};
-function playDing() {
+    }, 1000)
+}, { once: true }); // only run once
+
+function playMelody() {
     const ctx = new (window.AudioContext || window.webkitAudioContext)();
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
+    const notes = [440, 660, 880]; // A4, E5, A5
 
-    osc.type = 'triangle';
-    osc.frequency.setValueAtTime(880, ctx.currentTime); // A5
-    gain.gain.setValueAtTime(0.001, ctx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.2, ctx.currentTime + 0.01);
-    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+    notes.forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
 
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-    osc.start();
-    osc.stop(ctx.currentTime + 0.4);
+        osc.frequency.value = freq;
+        osc.type = 'sine';
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        const time = ctx.currentTime + i * 0.2;
+        gain.gain.setValueAtTime(0.2, time);
+        gain.gain.exponentialRampToValueAtTime(0.001, time + 0.15);
+
+        osc.start(time);
+        osc.stop(time + 0.2);
+    });
+}
+
+function openProjectWithWarning(url) {
+    const popup = document.getElementById('warningPopup');
+    popup.style.display = 'flex';
+
+    setTimeout(() => {
+        window.location.href = url;
+    }, 3000); // Wait 3 seconds before redirecting
 }
 
 const box = document.querySelector('.intro');
