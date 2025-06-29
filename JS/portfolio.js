@@ -10,8 +10,8 @@ window.onload = function () {
 let audioAllowed = false;
 window.addEventListener('click', () => {
     audioAllowed = true;
+    playMelody();
     setTimeout(function () {
-        playMelody();
         document.getElementById("popup").style.display = "flex";
         setTimeout(function () {
             document.getElementById("popup").style.display = "none";
@@ -47,6 +47,7 @@ function openProjectWithWarning(url) {
     popup.style.display = 'flex';
 
     setTimeout(() => {
+        popup.style.display = 'none';
         window.location.href = url;
     }, 3000); // Wait 3 seconds before redirecting
 }
