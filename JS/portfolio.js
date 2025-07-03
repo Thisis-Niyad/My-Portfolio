@@ -62,6 +62,12 @@ box.addEventListener('animationend', () => {
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     // Adjust rotation based on scroll position
+    l = 25 + Math.abs((((scrollY * 0.1) + 125) % 250) - 125);
+    console.log(l);
+
+    document.querySelectorAll('.square').forEach(el => {
+        el.style.borderRadius = `${l}px`;
+    });
     document.getElementById('background-sqr').style.transform = `rotate(${scrollY * 0.1 + 45}deg)`;
 
 });

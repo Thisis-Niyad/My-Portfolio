@@ -365,7 +365,7 @@ header {
   position: absolute;
   right: 10px;
   top: 100px;
-  border-radius: 7px 7px 0 20%;
+  border-radius: 7px 7px 0 17%;
   padding: 1px 1px 7px;
 }
 #popup div {
@@ -375,7 +375,7 @@ header {
   background: #fff;
   width: 100%;
   height: 100%;
-  border-radius: 7px 7px 7px 8px;
+  border-radius: 7px 7px 7px 4px;
 }
 
 .background {
@@ -395,6 +395,7 @@ header {
 .background .square {
   border-radius: 25px;
   margin: 5px;
+  transition: border-radius 0.1s;
 }
 
 .square:nth-child(1) {
