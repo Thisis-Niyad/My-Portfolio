@@ -203,9 +203,9 @@ header {
   height: 100vh;
   width: 250px;
   z-index: 999;
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   display: none;
   flex-direction: column;
   align-items: flex-start;
@@ -246,11 +246,6 @@ header {
 @media (max-width: 800px) {
   .hideon800 {
     display: none;
-  }
-}
-@media (max-width: 600px) {
-  header {
-    background-color: rgb(0, 0, 0);
   }
 }
 #switch {
@@ -325,7 +320,7 @@ header {
 }
 
 .sideBar-wht {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   color: #000;
 }
 .sideBar-wht li:hover {
@@ -334,7 +329,7 @@ header {
 }
 
 .sideBar-blck {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   color: #fff;
 }
 .sideBar-blck li:hover {
