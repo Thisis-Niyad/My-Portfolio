@@ -63,7 +63,6 @@ window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     // Adjust rotation based on scroll position
     l = 25 + Math.abs((((scrollY * 0.1) + 125) % 250) - 125);
-    console.log(l);
 
     document.querySelectorAll('.square').forEach(el => {
         el.style.borderRadius = `${l}px`;
@@ -85,8 +84,9 @@ function closesidebar() {
 }
 const texts = [
     "Muhammed Niyad",
-    "MERN Stack Developer",
     "Full Stack Developer",
+    "MERN Stack Developer",
+    "App Developer",
     "Autodidacts"
 ]
 let textIndex = 0;
