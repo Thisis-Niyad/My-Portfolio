@@ -1,9 +1,16 @@
+*
+    padding: 0
+    margin: 5px 0
+.credentailUrl
+    background-color: steelblue
+    padding: 7px
 a
     all: unset
 .text-center
     text-align: center
 body
     font-family: sans-serif
+    background-color: darkgray
 .fs-1
     font-size: calc(1.375rem + 1.5vw) !important
 
@@ -21,11 +28,13 @@ body
     display: flex
     align-items: flex-start
     justify-content: center
+    margin-bottom: 10px
 .certi
     width: 100%
     display: flex
     align-items: center
     justify-content: center
+    flex-direction: column
     a
         display: flex
         align-items: center
@@ -41,6 +50,9 @@ body
     flex-wrap: wrap
     img
         width: 400px
+@media ( min-width:800px  )
+    .credentailUrl
+        padding: 10px
 @media (max-width:600px)
     .row
         img
@@ -48,7 +60,7 @@ body
     .certi
         img,a
             width: 95%
-            padding: 20px 0
+
     .col
         display: flex
         justify-content: center

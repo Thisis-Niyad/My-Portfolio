@@ -1,3 +1,13 @@
+* {
+  padding: 0;
+  margin: 5px 0;
+}
+
+.credentailUrl {
+  background-color: steelblue;
+  padding: 7px;
+}
+
 a {
   all: unset;
 }
@@ -8,6 +18,7 @@ a {
 
 body {
   font-family: sans-serif;
+  background-color: darkgray;
 }
 
 .fs-1 {
@@ -36,6 +47,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 .certi {
@@ -43,6 +55,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .certi a {
   display: flex;
@@ -65,13 +78,17 @@ body {
   width: 400px;
 }
 
+@media (min-width: 800px) {
+  .credentailUrl {
+    padding: 10px;
+  }
+}
 @media (max-width: 600px) {
   .row img {
     width: 75%;
   }
   .certi img, .certi a {
     width: 95%;
-    padding: 20px 0;
   }
   .col {
     display: flex;
