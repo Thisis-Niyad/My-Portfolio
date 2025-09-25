@@ -721,10 +721,10 @@ header {
 
 footer {
   height: 40vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: transparent;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
-  color: #c5c3c3;
+  box-shadow: -7px -16px 20px rgba(0, 0, 0, 0.08);
 }
 
 .blueGradient {
