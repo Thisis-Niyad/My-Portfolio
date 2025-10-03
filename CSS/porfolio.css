@@ -898,4 +898,61 @@ footer {
 }
 .project-card a:hover {
   background: #1e272e;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /* Popup box */
+}
+.overlay .BDayPopup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: popupFade 0.4s ease;
+}
+.overlay .BDayPopup h2 {
+  margin-bottom: 10px;
+  color: #ff4081;
+}
+.overlay .BDayPopup p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.overlay .BDayPopup button {
+  margin: 5px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  display: flex;
+}
+.overlay .wish-btn {
+  background: #4caf50;
+  color: white;
+}
+.overlay .wish-btn:hover {
+  background: #43a047;
+}
+@keyframes popupFade {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=porfolio.css.map */

@@ -1,3 +1,12 @@
+
+
+const myBirthday = "10-04"; // Example: October 4
+// Get today’s date in MM-DD format
+const today = new Date();
+const month = String(today.getMonth() + 1).padStart(2, '0');
+const day = String(today.getDate()).padStart(2, '0');
+const todayStr = month + "-" + day;
+
 window.onload = function () {
     setTimeout(function () {
         // document.getElementById('welcome').style.display = 'none';
@@ -5,6 +14,11 @@ window.onload = function () {
         document.getElementById('main-content').style.display = 'block';
         typeWriter();
     }, 2000); // Match the animation duration (3s)
+    if (todayStr === myBirthday) {
+        setTimeout(() => {
+            document.getElementById("overlay").style.display = "flex";
+        }, 3000);
+    }
 };
 
 let audioAllowed = false;
@@ -234,3 +248,7 @@ function scrollToTop(event) {
     window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling
 }
 
+//Bdpopup
+document.getElementById("closeBtn").onclick = function () {
+    document.getElementById("overlay").style.display = "none";
+};
